@@ -11,3 +11,28 @@ to a remote server and using commands to navigate the space
 ![VS Code Download Page](https://github.com/BrianMorse12604/cse15l-lab-reports/blob/main/CSE15L%20Lab1/Screenshot%20(8).png)
 * Make sure to choose the right download for your device and follow all instructions provided on the page until you can open up the software and see a page like so
 ![VS Code Blank Page](https://github.com/BrianMorse12604/cse15l-lab-reports/blob/main/CSE15L%20Lab1/Screenshot%20(6).png)
+
+---
+
+## Step 2 - Remotely Connecting
+* If you do not have git installed on your device, download git [here](https://gitforwindows.org/) so that you can use `git bash`
+* Next open up a bash terminal by doing Ctl + \` or going to Terminal and clicking new Terminal on VS Code and use the following command utilizing `ssh`, but replace the server address with the server address that you are assigned and have access to
+```
+$ ssh cs15lwi23afo@ieng6.ucsd.edu
+```
+* If it is your first time connecting to this server, you will be prompted if you want to continue, type *yes*. It will then ask for your password. Put in the complete password you have associated with the account, the terminal will not show that you are typing anything, but it is still tracking the results. Once the password is fully typed in, press enter
+* If all went well, you should now be connected to the remote server and have access to the information there as displayed
+![Entered Remote Server](https://github.com/BrianMorse12604/cse15l-lab-reports/blob/main/CSE15L%20Lab1/Screenshot%20(7).png)
+>**NOTE** If this is your first time entering the server, you will have more opening text than what is displayed here, but as long as this is similar to the end of the output provided, you have successfully gotten connection
+
+---
+
+## Step 3 - Run Some Commands
+* Now that you are connected to the remote server, test out some commands such as changed directory: `cd`, list: `ls`, or looking at the text of files: `cat`
+* Test out these commands on both the remote server and your client computer as they will have different results due to containing different files and folders, which can be seen and displayed via these tests, like in the image below
+![Tested Commands](https://github.com/BrianMorse12604/cse15l-lab-reports/blob/main/CSE15L%20Lab1/Screenshot%20(5).png)
+* Once you are done testing commands, use Ctl-D or the command `exit` to disconnect from the remote server
+
+---
+
+**Congrats!** You now should be able to connect to a remote server and manipulate the connection to do different jobs, this will be a very important thing to know for future parts of CSE 15L
