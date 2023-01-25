@@ -35,6 +35,7 @@ $ ssh cs15lwi23afo@ieng6.ucsd.edu
 ## Step 3 - Run Some Commands
 * Now that you are connected to the remote server, test out some commands such as changed directory: `cd`, list: `ls`, or looking at the text of files: `cat`
 * Test out these commands on both the remote server and your client computer as they will have different results due to containing different files and folders, which can be seen and displayed via these tests, like in the image below
+* By running these commands, I learned it is quite possible to change the output delivered based on what additional information you give the command. For example, by adding different options after the `ls` command, such as `-lat`, we drastically change how the information is sorted and displayed. By doing `-l`, we got all of the access information for the files, `-a` displayed the hidden files, and `-t` sorted the files by the time it was last edited, which creates a different and interesting output compared to the standard version of the command
 
 ![Tested Commands](Screenshot%20(5).png)
 
