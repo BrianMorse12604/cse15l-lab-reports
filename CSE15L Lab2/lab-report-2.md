@@ -130,7 +130,35 @@ To display that mirror arrays is the outcome of the method, we do another JUnit 
 
 When the tests are run, this is the display that JUnit provides the user to display what went wrong
 
+![Outcome of JUnit](Screenshot_20230126_103513.png)
 
+In the screenshot above, we can see that the regular array failed first at index 2. If the function was to work properly, the value 1 should be held in that index, but 
+instead the value 3 is there. This is due to the mirroring of the current function. Instead of swapping values in place like the function should, it copies over the 
+right side values onto the left side at first. By the time the right side values should be getting replaced by the left values, they are already replaced with the same 
+values so no changes will be made on the right.
+
+This is the old version of the method provided by the class:
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+
+In order to fix it, the code was replaced with the following:
+```
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length/2; i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length-i-1] = temp;
+    }
+  }
+```
+
+This completes the intention of the function properly now as it only goes through half of the array and does an actual swap using a `temp` value. This makes the array 
+actually reversed in place as it should be.
 
 ---
 
