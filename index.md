@@ -4,3 +4,6 @@ This website was created for the sole purpose of the organization of lab reports
 
 ## Lab Report 1 
 Find the first lab [here](CSE15L%20Lab1/lab-report-1.html). It is a tutorial on the basics of setting up Visual Studio Code, Git, and learning some basic terminal commands.
+
+## Lab Report 2
+Find the second lab [here](CSE15L%20Lab2/lab-report-2.html). It goes into creating a basic server and its uses, debugging code using JUnit, and what was recently learned.
