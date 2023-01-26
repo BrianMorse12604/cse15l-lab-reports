@@ -160,6 +160,9 @@ static void reverseInPlace(int[] arr) {
 This completes the intention of the function properly now as it only goes through half of the array and does an actual swap using a `temp` value. This makes the array 
 actually reversed in place as it should be.
 
+This can be seen as the JUnit tests now successfully run:
+![JUnit Success](Screenshot_20230126_015713.png)
+
 ---
 
 ## What I Recently Learned
