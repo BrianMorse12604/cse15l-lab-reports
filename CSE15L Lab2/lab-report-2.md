@@ -101,6 +101,34 @@ properly\nYes it does!!" since the second message got added on.
 
 ## Debugging
 
+The ArrayExamples class had buggy methods within its code, including the `reverseInPlace(int[] arr)` method. In an attempt to fix the bug, we have to do some tests to 
+find the symptoms and the causes of the bug.
+
+Here is a JUnit Test that fails using the above function
+
+```
+  @Test
+  public void testReverseInPlaceRegular() {
+    int[] input = {1,2,3};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[] {3,2,1}, input);
+  }
+```
+> HINT: The input of {1,2,3} fails as it is not a mirrored array, which is what the buggy version of the function produced
+
+To display that mirror arrays is the outcome of the method, we do another JUnit test to confirm
+
+```
+ @Test
+  public void testReverseInPlaceMirror() {
+    int[] input = {1,2,1};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[] {1,2,1}, input);
+  }
+```
+> HINT: The input of {1,2,1} is mirrored, so the function "works" properly for the provided array
+
+When the tests are run, this is the display that JUnit provides the user to display what went wrong
 
 
 
