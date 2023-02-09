@@ -36,7 +36,7 @@ written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
 written_2/travel_guides/berlitz2/China-History.txt
 written_2/travel_guides/berlitz2/China-WhereToGo.txt
 ```
-* Once again the `-l` option was used for the sake of readability of the output of the command. Clearly there are many files that talk about or at least mention Hong Kong so it becomes extremely cluttered if every long line was printed alongside it. However, for more information, the user can now look more into each of those file paths in order to learn more
+* Once again the `-l` option was used for the sake of readability of the output of the command. Clearly there are many files that talk about or at least mention Hong Kong so it becomes extremely cluttered if every long line was printed alongside it. However, for more information, the user can now look more into each of those file paths in order to learn more.
 * The first example could be used for a very specified search to find a lost file, while this example is more pertaining to finding a general idea of where to do some research to learn more about a subject, like searching a library catalog for a topic you are interested in instead of looking at each book.
 
 For more examples and where this info was found, go here to #13: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) 
@@ -62,8 +62,8 @@ $ grep -i "beach" written_2/travel_guides/berlitz1/HandRHawaii.txt
         camp right on the beach. Outdoor activities run the gamut: horseback
         Lanai’s finest beach (Hulopoe), the Manele Bay Hotel offers water
 ```
-* In this example, only the `-i` option is utilized to search a single file, trying to inquire on some information about a beach in Hawaii
-* As displayed in this example, case insensitivity was important as many times when beach is capitalized it referred to a name of a certain beach, instead of just the general concept of the word. Without the case insensitivity, the `grep` command would not have picked up on these details within the file
+* In this example, only the `-i` option is utilized to search a single file, trying to inquire on some information about a beach in Hawaii.
+* As displayed in this example, case insensitivity was important as many times when beach is capitalized it referred to a name of a certain beach, instead of just the general concept of the word. Without the case insensitivity, the `grep` command would not have picked up on these details within the file.
 
 ```
 $ grep -Ri "hotel with" written_2/
@@ -81,3 +81,93 @@ written_2/travel_guides/berlitz2/Budapest-WhereoGo.txt:The view west from Fisher
 * While there are many instances in this output that has an exact match with case sensitivity to "hotel with", there are instances where case insensitivity was important. For example, in the file `Budapest-WhereoGo.txt`, the string "Hilton Hotel with" can be found within the file. This would not have been included if the command was to only allow the lowercase hotel form to be matching, demonstrating how case insensitivity can be useful in finding the most amount of results within a directory.
 
 For more examples and where this info was found, go here to #1: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
+---
+
+## 3. Line Number: `grep -n`
+
+Sometimes when searching in files, you want to easily be able to reach where in the file the term is found. This is doable with the `-n` option, it will display the line number in which the term is found within the file. Here are some displays of the line number option:
+
+```
+$ grep -Rn "Lucayans" written_2/
+written_2/travel_guides/berlitz2/Bahamas-History.txt:6:Centuries before the arrival of Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. We know them today as the Lucayans. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
+written_2/travel_guides/berlitz2/Bahamas-History.txt:7:The Spaniards never bothered to settle in the Bahamas, but the number of shipwrecks attest that their galleons frequently passed through the archipelago en route to and from the Caribbean, Florida, Bermuda, and their home ports. On Eleuthera the explorers dug a fresh-water well — at a spot now known as “Spanish Wells” — which was used to replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold. As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
+```
+
+* This is a very similar option as seen from the recursive section of this report, but instead of receiving just the file with `-l`, we instead get the text along with the line number and location with `-n`.
+* Right after the file path is provided and before the text is actually displayed, the result shows that the term "Lucayans" shows up at lines 6 and 7.
+* This makes it easy to directly access where to find the information outside of having to do the search every time.
+
+```
+$ grep -ni "casino" written_2/travel_guides/berlitz1/WhatToLasVegas.txt 
+20:        the two overlap, often to the point of indistinctness. Casinos and
+48:        Strip, where nearly twenty major casinos in excess of 100,000 sq ft
+53:        furious, with generally inflexible house rules. Downtown casinos are a
+69:        the casino.
+80:        casinos offer a variety of video game slot machines. Try Bally’s for
+97:        sections of the casino. Gambling lessons are highly recommended for
+139:        that of any other casino game — but it’s an inexpensive way to pass the
+178:        the play at table games in many casinos. Though all modern slot
+204:        long as the bottom line shined, casino operators, especially those in
+208:        accounting procedures, every sector of a hotel-casino had to show
+236:        Girls impersonators still have Ginger. Stratosphere Hotel and Casino,
+245:        Casino, 3570 Las Vegas Boulevard South; Tel. (702) 731-7110. Multiple
+260:        Hotel and Casino, 3600 Las Vegas Boulevard South; Tel. (702) 693-7111.
+266:        entertainment. Mirage Hotel and Casino, 7900 Las Vegas Boulevard South;
+272:        for all ages. MGM Grand Hotel and Casino, 3799 Las Vegas Boulevard
+277:        theater named for “Mr. Vegas” himself. Stardust Resort and Casino, 3000
+283:        powerful. Luxor Hotel and Casino, 3900 Las Vegas Boulevard South; Tel.
+290:        adults only. Bally’s Hotel and Casino, 3645 Las Vegas Boulevard South;
+297:        for families. Excalibur Hotel and Casino, 3850 Las Vegas Boulevard
+303:        Tina Turner. Imperial Palace Hotel and Casino, 3535 Las Vegas Boulevard
+310:        dancers. Monte Carlo Hotel and Casino, 3770 Las Vegas Boulevard South;
+317:        and Casino, 3790 Las Vegas Boulevard South; Tel. (702) 740-6969. Shows
+323:        1500-seat showroom. Mirage Hotel and Casino, 3400 Las Vegas Boulevard
+331:        Casino, 2901 Las Vegas Boulevard South; Tel. (702) 734-5110. Shows 7:30
+337:        showgirls is what the myth was based on. Tropicana Resort and Casino,
+387:        Casino, the mall houses interesting specialty stores in addition to
+644:        are a surprising number of kid-friendly activities. Most casinos have
+669:        friendly hotel-casino, and in recent years has tried to up the ante
+673:        tag arena. It’s located behind the venerable hotel-casino, which itself
+687:        Want to get the kids away from the casinos? Try the
+```
+
+* This looks for the term "casino" with no regard for case sensitivity. As seen, many times casino is found along with line number for if the user wants to directly go there to find out more.
+* This makes deeper research easier for the user instead of simply using the surface research from `grep`.
+
+For more examples and where this info was found, go here to #6: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
+---
+
+## 4. Multiple Patterns: `grep -e`
+
+Sometimes when you want to search a group of files, you do not want to just search a single term. Instead of having to do multiple `grep` commands, you can use the `-e` option to search for multiple items at the same time. This not only saves time to only have to type the command once, but it will also put all of your results in the same place instead of having to consolidate it all together again later. It also allows for variations of words to be searched for in case a slight variation would change the results. Here are some displays of searching for multiple patterns:
+
+```
+$ grep -Rl -e "Lucayan" -e "Lucayans" -e "Lucayan's" written_2/
+written_2/travel_guides/berlitz2/Bahamas-History.txt
+written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
+```
+
+* This searches recusrively for both "Lucayan" and "Lucayans" and returns the files where it is found. While in this situation we could just use "Lucayan" as it is a substring of "Lucayans" and "Lucayan's", if we were searching for the whole word or wanted different returns for the two of them, having both options is useful.
+* This is a display of searching for similar terms within a directory to include variations needed.
+
+```
+$ grep -n -e "restaurant" -e "hotel" -e "beach" written_2/travel_guides/berlitz1/WhatToJapan.txt
+36:        your larger purchases to your hotel, where they will be waiting for you
+134:        Tokyo Classified, which are available in your hotel and in the foreign
+251:        restaurant districts of Akasaka and Roppongi. Teenagers might like to
+368:        the worst time to visit Japan, since every hotel, inn, train, and even
+405:        seat and hotel bed with millions of others. So bad is the traffic that
+425:        resorts. If necessary, get your hotel to help you make
+437:        enthusiasts go south to the beaches of Okinawa, the liveliest being
+```
+
+* This searches for "restaurant", "hotel", and "beach" within the `WhatToJapan.txt` file and returns the line number from where it is found.
+* This displays searching for three completely different topics and finds all instances of each term within the file. This is useful as no more searches would need to be done within this file as it was completed all at once instead.
+
+For more examples and where this info was found, go here to #10: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
+---
+
+`grep` has many different options that can be used to change the output of the command. There are many more intricacies that can be found about the command, but with these four options there is a lot more that can be completed for the convenience of the user. They make life easier and more readable for anyone that needs to know the information.
