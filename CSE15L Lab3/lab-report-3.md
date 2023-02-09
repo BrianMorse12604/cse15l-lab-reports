@@ -62,7 +62,7 @@ $ grep -i "beach" written_2/travel_guides/berlitz1/HandRHawaii.txt
         camp right on the beach. Outdoor activities run the gamut: horseback
         Lanai’s finest beach (Hulopoe), the Manele Bay Hotel offers water
 ```
-* In this example, only the `-i` option is utilized to search a single file, trying to inquire on some information about a beach in Hawaii.
+* In this example, only the `-i` option is utilized to search a single file, `HandRHawaii.txt`, trying to inquire on some information about a beach in Hawaii.
 * As displayed in this example, case insensitivity was important as many times when beach is capitalized it referred to a name of a certain beach, instead of just the general concept of the word. Without the case insensitivity, the `grep` command would not have picked up on these details within the file.
 
 ```
@@ -95,7 +95,7 @@ written_2/travel_guides/berlitz2/Bahamas-History.txt:7:The Spaniards never bothe
 ```
 
 * This is a very similar option as seen from the recursive section of this report, but instead of receiving just the file with `-l`, we instead get the text along with the line number and location with `-n`.
-* Right after the file path is provided and before the text is actually displayed, the result shows that the term "Lucayans" shows up at lines 6 and 7.
+* Right after the file path is provided and before the text is actually displayed, the result shows that the term "Lucayans" shows up at lines 6 and 7 in `Bahamas-History.txt`.
 * This makes it easy to directly access where to find the information outside of having to do the search every time.
 
 ```
@@ -132,7 +132,7 @@ $ grep -ni "casino" written_2/travel_guides/berlitz1/WhatToLasVegas.txt
 687:        Want to get the kids away from the casinos? Try the
 ```
 
-* This looks for the term "casino" with no regard for case sensitivity. As seen, many times casino is found along with line number for if the user wants to directly go there to find out more.
+* This looks for the term "casino" with no regard for case sensitivity in `WhatToLasVegas.txt`. As seen, many times casino is found along with line number for if the user wants to directly go there to find out more.
 * This makes deeper research easier for the user instead of simply using the surface research from `grep`.
 
 For more examples and where this info was found, go here to #6: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
@@ -149,7 +149,7 @@ written_2/travel_guides/berlitz2/Bahamas-History.txt
 written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
 ```
 
-* This searches recusrively for both "Lucayan" and "Lucayans" and returns the files where it is found. While in this situation we could just use "Lucayan" as it is a substring of "Lucayans" and "Lucayan's", if we were searching for the whole word or wanted different returns for the two of them, having both options is useful.
+* This searches recusrively for both "Lucayan" and "Lucayans" in `written_2/` and returns the files where it is found. While in this situation we could just use "Lucayan" as it is a substring of "Lucayans" and "Lucayan's", if we were searching for the whole word or wanted different returns for the two of them, having both options is useful.
 * This is a display of searching for similar terms within a directory to include variations needed.
 
 ```
