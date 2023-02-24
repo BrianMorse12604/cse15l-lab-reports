@@ -10,3 +10,6 @@ Find the second lab [here](CSE15L%20Lab2/lab-report-2.html). It goes into creati
 
 ## Lab Report 3
 Find the third lab [here](CSE15L%20Lab3/lab-report-3.html). It goes into the `grep` command and the options that can be used to alter the input and output of the command.
+
+## Lab Report 4
+Find the fourth lab [here](CSE15L%20Lab4/lab-report-4.html). It goes into efficiency when writing commands in the bash terminal in order to make things faster and less error prone.
