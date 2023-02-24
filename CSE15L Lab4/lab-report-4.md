@@ -12,7 +12,7 @@ In an attempt to improve efficiency when using commands on the command line, the
 
 ## 1. Log into ieng6
 
-![Log into ieng6]()
+![Log into ieng6](Screenshot_20230224_022521.png)
 
 *Keys Pressed*: `<Ctrl+R>` s `<enter>`
 
@@ -22,7 +22,7 @@ The `ssh cs15lwi23afo@ieng6.ucsd.edu` command was in my local bash history so I 
 
 ## 2. Clone your fork of the repository from your Github account
 
-![Clone git repo]()
+![Clone git repo](Screenshot_20230224_023639.png)
 
 *Keys Pressed*: git clone `<Ctrl+V><enter>`
 
@@ -32,7 +32,7 @@ Neither "git" nor "clone" can be autocompleted by any special shortcuts, but it 
 
 ## 3. Run the tests, demonstrating that they fail
 
-![Run failing tests]()
+![Run failing tests](Screenshot_20230224_024745.png)
 
 *Keys Pressed*: cd l `<tab><enter>`, `<Ctrl+R>` javac `<enter>`, `<Ctrl+R>` T `<enter>`
 
@@ -40,7 +40,7 @@ In order to guarentee that the java commands will run as intended, I first had t
 
 ## 4. Edit the code file to fix the failing test
 
-![Edit the code file]()
+![Edit the code file](Screenshot_20230224_030037.png)
 
 *Keys Pressed*: `<Ctrl+R>` sed `<enter>`
 
@@ -50,7 +50,7 @@ The command `sed -i '43 s/index1/index2/' ListExamples.java` is a command that h
 
 ## 5. Run the tests, demonstrating that they now succeed
 
-![Run passing tests]()
+![Run passing tests](Screenshot_20230224_031515.png)
 
 *Keys Pressed*: `<up><up><up><enter>`, `<up><up><up><enter>`
 
@@ -60,7 +60,7 @@ Because the commands we need to run for step 5 are the exact same commands from 
 
 ## 6. Commit and push the resulting change to your Github account
 
-![Commit and Push]()
+![Commit and Push](Screenshot_20230224_031902.png)
 
 *Keys Pressed*: git add L `<tab>` .j `<tab><enter>`, git commit -m 's' `<enter>`, git push `<tab>` m `<tab><enter>`
 
