@@ -13,3 +13,6 @@ Find the third lab [here](CSE15L%20Lab3/lab-report-3.html). It goes into the `gr
 
 ## Lab Report 4
 Find the fourth lab [here](CSE15L%20Lab4/lab-report-4.html). It goes into efficiency when writing commands in the bash terminal in order to make things faster and less error prone.
+
+## Lab Report 5
+Find the fifth lab [here](CSE15L%20Lab5/lab-report-5.html). It goes into the `find` command and the options that can be used to alter the functionality and capabilities of the command.
